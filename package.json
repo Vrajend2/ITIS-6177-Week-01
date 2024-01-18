@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vignesh Babu Rajeendran",
   "license": "ISC",
   "description": ""
 }
