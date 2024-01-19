@@ -8,9 +8,11 @@
   "name": "itis-6177-week-01",
   "version": "1.0.0",
   "main": "server.js",
+  "engines" :
+  { "node" : ">=10"},
   "devDependencies": {},
   "keywords": [],
-  "author": "",
+  "author": "Vignesh Babu Rajendran",
   "license": "ISC",
-  "description": ""
+  "description": "ITIS-6177 System Integration Assignment "
 }
