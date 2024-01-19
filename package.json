@@ -9,10 +9,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "engines" :
-  { "node" : ">=10"},
+  {"node" : ">=10"},
   "devDependencies": {},
   "keywords": [],
   "author": "Vignesh Babu Rajendran",
   "license": "ISC",
-  "description": "ITIS-6177 System Integration Assignment "
+  "description": "ITIS-6177 System Integration Assignment"
 }
