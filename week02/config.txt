@@ -1,0 +1,51 @@
+ssh root@159.89.84.173
+
+===============================================================================
+NGinx 
+===============================================================================
+$ yum install epel-release yum-utils -y
+$ yum install nginx -y
+$ systemctl start nginx
+$ systemctl enable nginx
+$ yum install firewalld -y
+$ systemctl start firewalld
+$ systemctl enable firewalld
+$ firewall-cmd --permanent --zone=public --add-service=http
+$ firewall-cmd --permanent --zone=public --add-service=https
+$ firewall-cmd --zone=public --add-port=3000/tcp --permanent
+$ firewall-cmd --zone=public --add-port=3001/tcp --permanent
+$ firewall-cmd --zone=public --add-port=3002/tcp --permanent
+$ firewall-cmd --zone=public --add-port=3003/tcp --permanent
+$ firewall-cmd --reload
+$ cd /usr/share/nginx/html
+$ vi test.html
+Type the code shown in this slide
+Go to your browser and open
+http://xxx.xxx.xxx.xxx/test.html
+
+http://159.89.84.173/test.html
+
+
+================================================================================
+NodeJS
+================================================================================
+
+$ curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+$ yum install nodejs -y
+$ cd /usr/share/nginx
+$ vi server.js
+Type the code shown in this slide
+$ npm install express
+$ npm install -g pm2
+$ pm2 start server.js
+Go to the browser and open the IP address plus 3000
+http://xxx.xxx.xxx.xxx:3000
+
+http://159.89.84.173/:3000
+
+
+=================================================================================
+
+NGinx server: http://159.89.84.173/
+NodeJS server: http://159.89.84.173:3000/
+

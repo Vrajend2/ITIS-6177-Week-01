@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Data</title>
+</head>
+<body>
+    <h1>Testing Node and Express server: Vignesh Babu Rajendran</h1><hr>
+    <p>Go to Chrome Dev Tools (F12) and look at your console. Also, check your network tab.</p> </br>
+    Result1 (Fetch JSON data): <div id="jsonResult"></div> </br>
+
+    Result2 (Fetch text data): <div id="textResult"></div> </br>
+
+    <script>
+        // Fetch JSON data
+        fetch('http://159.89.84.173:3000/json')
+          .then(response => response.json())
+          .then(data => {
+            // Print JSON data to the DOM
+            console.log('Fetch JSON data=>', data);
+            document.getElementById('jsonResult').innerText = JSON.stringify(data);
+          })
+          .catch(error => console.error('Error:', error));
+        
+        // Fetch text data
+        fetch('http://159.89.84.173:3000/text')
+          .then(response => response.text())
+          .then(data => {
+            // Print text data to the DOM
+            console.log('Fetch text data', data);
+            document.getElementById('textResult').innerText = data;
+          })
+          .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
